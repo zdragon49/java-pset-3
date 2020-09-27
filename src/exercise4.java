@@ -19,7 +19,7 @@ public class exercise4 {
 
         float perimeter = (2 * h) + (2 * w);
 
-        System.out.print("\n" + ormatDecimal.format(perimeter) + " centimeters.");
+        System.out.print("\n" + formatDecimal.format(perimeter) + " centimeters.");
 
     }
 }
