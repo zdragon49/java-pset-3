@@ -12,7 +12,7 @@ public class exercise10 {
         System.out.print("Fahrenheit : ");
         double f = ni.nextDouble();
 
-        double k = ((f - 32) * (5/9)) + 273.15;
+        double k = ((f - 32) * (5/9f)) + 273.15;
         double c = k - 273.15;
 
         System.out.println("\nCelsius    : " + formatDecimal.format(c));
