@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
-public class exercise3 {
+public class Exercise3 {
     public static void main(String[] args) {
         final double inchtomili = 25.4;  // there are 25.4 mili in 1 inch
 

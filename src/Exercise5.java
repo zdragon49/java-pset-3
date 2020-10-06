@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
-public class exercise5 {
+public class Exercise5 {
     public static void main(String[] args) {
 
         Scanner ni = new Scanner(System.in);

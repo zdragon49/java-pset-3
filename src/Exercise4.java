@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.text.DecimalFormat;
 
 
-public class exercise4 {
+public class Exercise4 {
     public static void main(String[] args) {
         final double inchtocenti = 2.54; // there are 2.54 centimeters in 1 in
 
