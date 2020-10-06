@@ -1,25 +1,26 @@
-import java.util.Scanner;
 import java.text.DecimalFormat;
-
+import java.util.Scanner;
 
 public class Exercise4 {
     public static void main(String[] args) {
-        final double inchtocenti = 2.54; // there are 2.54 centimeters in 1 in
-
-        Scanner ni = new Scanner(System.in);
-
-        DecimalFormat formatDecimal = new DecimalFormat("#.00");
-        formatDecimal.setGroupingUsed(true);
-        formatDecimal.setGroupingSize(3);
-
+        Scanner in = new Scanner(System.in);
         System.out.print("Height : ");
-        float h = (float) (ni.nextFloat() * inchtocenti);
+        double inHeight = in.nextDouble();
+
         System.out.print("Width : ");
-        float w = (float) (ni.nextFloat() * inchtocenti);
+        double inWidth = in.nextDouble();
 
-        float perimeter = (2 * h) + (2 * w);
+        double cmHeight = inHeight * 2.54;
+        double cmWidth = inWidth * 2.54;
 
-        System.out.print("\n" + formatDecimal.format(perimeter) + " centimeters.");
+        double perimeter = cmHeight + cmHeight + cmWidth + cmWidth;
 
+        DecimalFormat commaFormat;
+        commaFormat = new DecimalFormat("#,###.##");
+
+        System.out.println(" ");
+        System.out.println(commaFormat.format(perimeter) + " centimeters.");
+
+        in.close();
     }
 }
