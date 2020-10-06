@@ -3,20 +3,21 @@ import java.util.Scanner;
 
 public class Exercise10 {
     public static void main(String[] args) {
-        Scanner ni = new Scanner(System.in);
-        DecimalFormat formatDecimal = new DecimalFormat("0.00");
+        Scanner in = new Scanner(System.in);
 
-        formatDecimal.setGroupingUsed(true);
-        formatDecimal.setGroupingSize(3);
+        DecimalFormat decimalFormat = new DecimalFormat("0.00");
+        decimalFormat.setGroupingUsed(true);
+        decimalFormat.setGroupingSize(3);
 
         System.out.print("Fahrenheit : ");
-        double f = ni.nextDouble();
+        double fahrenheit = in.nextDouble();
 
-        double k = ((f - 32) * (5/9f)) + 273.15;
-        double c = k - 273.15;
+        double kelvin = ((fahrenheit - 32) * (5/9f)) + 273.15;
+        double celsius = kelvin - 273.15;
 
-        System.out.println("\nCelsius    : " + formatDecimal.format(c));
-        System.out.print("Kelvin     : " + formatDecimal.format(k));
-
+        System.out.println(" ");
+        System.out.println("Celsius    : " + decimalFormat.format(celsius));
+        System.out.print("Kelvin     : " + decimalFormat.format(kelvin));
+        System.out.println(" ");
     }
 }
