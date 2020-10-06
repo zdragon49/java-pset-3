@@ -1,35 +1,42 @@
+import java.text.NumberFormat;
 import java.util.Scanner;
-import java.text.DecimalFormat;
 
 public class Exercise6 {
     public static void main(String[] args) {
-        Scanner ni = new Scanner(System.in);
-        DecimalFormat formatDecimal = new DecimalFormat("#.00");
-
-        formatDecimal.setGroupingUsed(true);
-        formatDecimal.setGroupingSize(3);
+        Scanner in = new Scanner(System.in);
 
         System.out.print("Wage      : ");
-        double hrwage = ni.nextDouble();
+        double wage = in.nextDouble();
+
         System.out.print("Monday    : ");
-        double monhrs = ni.nextDouble();
+        double monday = in.nextDouble();
+
         System.out.print("Tuesday   : ");
-        double tuehrs = ni.nextDouble();
+        double tuesday = in.nextDouble();
+
         System.out.print("Wednesday : ");
-        double wedhrs = ni.nextDouble();
+        double wednesday = in.nextDouble();
+
         System.out.print("Thursday  : ");
-        double thurhrs = ni.nextDouble();
+        double thursday = in.nextDouble();
+
         System.out.print("Friday    : ");
-        double frihrs = ni.nextDouble();
+        double friday = in.nextDouble();
+
         System.out.print("Saturday  : ");
-        double sathrs = ni.nextDouble();
+        double saturday = in.nextDouble();
+
         System.out.print("Sunday    : ");
-        double sunhrs = ni.nextDouble();
+        double sunday = in.nextDouble();
 
-        double allhrs = monhrs + tuehrs + wedhrs
-                + thurhrs + frihrs + sathrs + sunhrs;
+        double grosspay = (monday * wage) + (tuesday * wage) + (wednesday * wage) + (thursday * wage) + (friday * wage) + (saturday * wage) + (sunday * wage);
 
-        double salaryweek = allhrs * hrwage;
-        System.out.print("\n$" + formatDecimal.format(salaryweek) + ".");
+        NumberFormat defaultFormat = NumberFormat.getCurrencyInstance();
+        defaultFormat.setMinimumFractionDigits(2);
+
+        System.out.println(" ");
+        System.out.println((defaultFormat.format(grosspay)) + ".");
+
+        in.close();
     }
 }
