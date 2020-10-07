@@ -7,7 +7,7 @@ public class Exercise4 {
         System.out.print("Height : ");
         double inHeight = in.nextDouble();
 
-        System.out.print("Width : ");
+        System.out.print("Width  : ");
         double inWidth = in.nextDouble();
 
         double cmHeight = inHeight * 2.54;
