@@ -7,7 +7,7 @@ public class Exercise3 {
         System.out.print("Height : ");
         double h = in.nextDouble();
 
-        System.out.print("Width : ");
+        System.out.print("Width  : ");
         double w = in.nextDouble();
 
         double inchArea = w * h;
